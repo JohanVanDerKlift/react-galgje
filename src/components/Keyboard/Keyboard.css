@@ -16,12 +16,12 @@
     color: black;
 }
 
-.keyboard-button.active {
+.keyboard-button-active {
     background-color: hsl(200, 100%, 50%);
     color: white;
 }
 
-.keyboard-button.inactive {
+.keyboard-button-inactive {
     opacity: .3;
 }
 

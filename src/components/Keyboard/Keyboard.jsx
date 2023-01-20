@@ -30,11 +30,18 @@ const KEYS = [
   "z"
 ]
 
-function Keyboard(props) {
+function Keyboard({activeLetters, inactiveLetters, addGuessedLetter, disabled}) {
     return (
         <div className="keyboard-grid">
           {KEYS.map((key) => {
-            return <button key={key} className="keyboard-button">{key}</button>
+            const isActive = activeLetters.includes(key);
+            const isInActive = inactiveLetters.includes(key);
+            return <button
+              onClick={() => addGuessedLetter(key)}
+              key={key}
+              className={`keyboard-button ${isActive ? "keyboard-button-active" : ""} ${isInActive ? "keyboard-button-inactive" : ""}`}
+              disabled={isInActive || isActive || disabled}
+            >{key}</button>
           })}
         </div>
     );

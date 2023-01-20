@@ -12,5 +12,9 @@
 }
 
 .letter {
-    /*visibility: hidden;*/
+    color: black;
+}
+
+.letter-lose {
+    color: red;
 }
